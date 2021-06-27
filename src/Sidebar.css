@@ -25,13 +25,10 @@
 .sidebar__top > h4 {
   color: gray;
   font-size: 11px;
-
 }
 .sidebar__top > h2 {
-    
-    font-size: 18px;
-    
-  }
+  font-size: 18px;
+}
 
 .sidebar__top > img {
   margin-bottom: -20px;
@@ -64,12 +61,37 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.sidebar__bottom{
-    text-align: left;
-    padding:10px ;
-    border: 1px solid lightgray;
-    background-color: white;
-    border-radius:  10px;
-    margin-top: 10px;
+.sidebar__bottom {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.sidebar__bottom > p {
+  font-size: 13px;
+  padding-bottom: 10px;
+}
 
+.sidebar__recentItem {
+  display: flex;
+  font-size: 11px;
+  color: gray;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.sidebar__recentItem:hover {
+  color: black;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar__hash {
+  margin-right: 10px;
+  margin-left: 5px;
 }
