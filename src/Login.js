@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.css'
 
 
@@ -6,7 +6,14 @@ import './Login.css'
 
 function Login() {
 
-    const logInToApp = () => {
+
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+
+
+    const logInToApp = (e) => {
+        e.preventDefault();
 
     }
 
@@ -18,11 +25,11 @@ function Login() {
             <img src="./konnekt.png" alt="" />
 
             <form >
-                <input placeholder='Full Name' type="text" />
+                <input value={name} onChange={e => setName(e.target.value)} placeholder='Full Name' type="text" />
                 <input placeholder='Profile Pic' type="text" />
-                <input placeholder=' Email' type="text" />
-                <input placeholder='Password' type="password" />
-                <button type='submit'>Sign In</button>
+                <input value={email} onChange={e => setEmail(e.target.value)} placeholder=' Email' type="text" />
+                <input value={password} onChange={e => setPassword(e.target.value)} placeholder='Password' type="password" />
+                <button onClick={logInToApp} type='submit'>Sign In</button>
             </form>
             <p>Not a Member?
                 <span className='login__register' onClick={register}>Register Now</span>
