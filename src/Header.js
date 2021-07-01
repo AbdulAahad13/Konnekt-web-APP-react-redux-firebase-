@@ -8,8 +8,20 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import konnekt from './konnekt.svg'
 import HeaderOption from './HeaderOption'
+import { useDispatch, useSelector } from 'react-redux'
+import { auth } from './firebase'
+import { logout, selectUser } from './features/userSlice'
+
 
 function Header() {
+    const user = useSelector(selectUser)
+    const dispatch = useDispatch()
+
+
+    const logOutOfApp = () => {
+        dispatch(logout())
+        auth.signOut();
+    }
     return (
         <div className='header'>
 
@@ -28,7 +40,8 @@ function Header() {
                 <HeaderOption Icon={MenuBookIcon} title='Groups' />
                 <HeaderOption Icon={ChatIcon} title='Messages' />
                 <HeaderOption Icon={NotificationsIcon} title='Notifications' />
-                <HeaderOption avatar="https://cdn-images-1.medium.com/max/1200/1*NpUUls7kjn9JhO4ChjGV7w.png" title='My Account' />
+                <HeaderOption avatar={true} title='My Account'
+                    onClick={logOutOfApp} />
             </div>
 
         </div>

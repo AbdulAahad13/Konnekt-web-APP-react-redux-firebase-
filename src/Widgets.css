@@ -1,0 +1,85 @@
+.widgets {
+  position: sticky;
+  top: 80px;
+  flex: 0.2;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  height: fit-content;
+  padding-bottom: 10px;
+}
+.widgets__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: #a442c7;
+}
+
+.widgets__header > h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.widgets__article {
+  display: flex;
+  cursor: pointer;
+  padding: 10px;
+}
+.widgets__article:hover {
+  background-color: whitesmoke;
+}
+.widgets__articleLeft {
+  color: #d052fc;
+  margin-right: 10px;
+}
+.widgets__articleLeft > .MuiSvgIcon-root {
+  font-size: 10px;
+}
+
+.widgets__articleRight {
+  flex: 1;
+}
+
+.widgets__articleRight > h4 {
+  font-size: 14px;
+}
+
+.widgets__articleRight > p {
+  font-size: 11px;
+  color: gray;
+}
+
+.widgets__friend {
+  display: flex;
+  cursor: pointer;
+  padding: 10px;
+}
+.widgets__friend:hover {
+  background-color: whitesmoke;
+}
+.widgets__friendLeft {
+  color: #d052fc;
+  margin-right: 10px;
+}
+.widgets__friendLeft > .MuiSvgIcon-root {
+  font-size: 10px;
+}
+
+.widgets__friendRight {
+  flex: 1;
+}
+
+.widgets__friendRight > h4 {
+  font-size: 14px;
+}
+
+.widgets__friendRight > p {
+  font-size: 11px;
+  color: gray;
+}
+.widgets__friendHeader {
+  color: #a442c7;
+  font-size: medium;
+  padding-left: 10px;
+}
